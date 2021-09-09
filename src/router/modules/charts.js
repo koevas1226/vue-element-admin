@@ -8,7 +8,7 @@ const chartsRouter = {
   redirect: 'noRedirect',
   name: 'Charts',
   meta: {
-    title: 'Charts',
+    title: '数据驾驶舱',
     icon: 'chart'
   },
   children: [
@@ -16,19 +16,31 @@ const chartsRouter = {
       path: 'keyboard',
       component: () => import('@/views/charts/keyboard'),
       name: 'KeyboardChart',
-      meta: { title: 'Keyboard Chart', noCache: true }
+      meta: { title: 'TOP排行榜', noCache: true }
     },
     {
       path: 'line',
       component: () => import('@/views/charts/line'),
       name: 'LineChart',
-      meta: { title: 'Line Chart', noCache: true }
+      meta: { title: '服务项目', noCache: true }
     },
     {
       path: 'mix-chart',
       component: () => import('@/views/charts/mix-chart'),
       name: 'MixChart',
-      meta: { title: 'Mix Chart', noCache: true }
+      meta: { title: '服务时间', noCache: true }
+    },
+    {
+      path: 'know-rate',
+      component: () => import('@/views/charts/mix-chart'),
+      name: 'know-rate',
+      meta: { title: '知晓率', noCache: true }
+    },
+    {
+      path: 'sign-status',
+      component: () => import('@/views/charts/mix-chart'),
+      name: 'sign-status',
+      meta: { title: '签约状态', noCache: true }
     }
   ]
 }
